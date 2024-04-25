@@ -1,0 +1,31 @@
+{
+  "name": "palmmind",
+  "version": "1.0.0",
+  "description": "Project to be submitted to Palmmind",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrbpurnachandra/palmmind.git"
+  },
+  "keywords": [
+    "palmmind"
+  ],
+  "author": "mrbpurnachandra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrbpurnachandra/palmmind/issues"
+  },
+  "homepage": "https://github.com/mrbpurnachandra/palmmind#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
