@@ -1,13 +1,19 @@
 const express = require("express");
+const bodyParser = require("body-parser"); 
+
 const connect = require("./db");
-const { User } = require("./models/User");
+const userRouter = require("./routes/users");
 
 const app = express();
 app.set("view engine", "pug");
 
+app.use(bodyParser.json()); 
+
 app.get("/", (req, res) => {
   res.render("index", { title: "Hey", message: "Hello there!" });
 });
+
+app.use("/users", userRouter)
 
 async function run() {
   // DB Connection
