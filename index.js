@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 var cookieParser = require("cookie-parser");
 const session = require("express-session");
@@ -13,12 +14,10 @@ const app = express();
 app.set("view engine", "pug");
 
 app.use(express.static("public"));
-// TODO
-app.use(cookieParser("secret"));
+app.use(cookieParser(process.env.SECRET));
 app.use(
   session({
-    // TODO
-    secret: "secret",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
   })
