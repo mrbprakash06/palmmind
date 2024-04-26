@@ -1,0 +1,30 @@
+h2 Users registered in system
+table.table.table-bordered.table-stripped.mt-4#user-table
+  thead
+    tr
+      th(scope='col') Username
+      th(scope='col') Email
+  tbody
+
+#modal.modal.fade(tabindex='-1' aria-labelledby='modalLabel' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h1#modalLabel.modal-title.fs-5 User Information
+        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+      .modal-body#user-info-modal-body
+        
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+
+#alert-modal.modal.fade(tabindex='-1' aria-labelledby='alertModalLabel' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h1#alertModalLabel.modal-title.fs-5 Something went wrong!
+        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+      .modal-body#alert-modal-body
+        
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+    

@@ -22,7 +22,10 @@
   "homepage": "https://github.com/mrbpurnachandra/palmmind#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "crypto-js": "^4.2.0",
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "joi": "^17.13.0",
     "mongoose": "^8.3.2",
     "pug": "^3.0.2"

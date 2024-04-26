@@ -1,0 +1,28 @@
+doctype html
+html
+  include includes/head.pug
+  body
+    .container
+        .row.justify-content-md-center.mt-4
+            .col-6.border.p-4.rounded
+                if flash && flash.type === "error"
+                    .alert.alert-danger(role='alert')= flash.message
+                h1 Welcome, @
+                  span= user.username
+                
+                unless user.admin
+                  p You are logged in as a regular user. Only admin can manage users!
+
+                if user.admin
+                  p You are logged in as admin. You can manage users!
+
+                form(method='post', action='/auth/logout')
+                  button.btn.btn-danger(type='submit') Logout
+        
+        .row.justify-content-md-center.mt-4
+            .col-6
+                if user.admin
+                  include includes/usertable.pug
+
+    script(src="/js/jquery-3.7.1.min.js") 
+    script(src="/js/index.js") 

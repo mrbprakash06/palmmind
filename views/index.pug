@@ -1,5 +1,15 @@
+doctype html
 html
-  head
-    title= title
+  include includes/head.pug
   body
-    h1= message
+    .container
+        .row.justify-content-md-center.mt-4
+            .col-6
+                h1 Welcome to Palmmind User CRUD
+                p Users can register themselves and access their dashboard. Admin can manage users.
+                
+        .row.justify-content-md-center    
+            .col-6
+                div 
+                    a.btn.btn-primary.me-4(href='/auth/login') Login
+                    a.btn.btn-secondary(href='/auth/register') Register
