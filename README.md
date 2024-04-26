@@ -12,7 +12,7 @@
 ## Technologies used
 - I used express to implement this app
 - I used jquery to add interractivity to pages. (For example deleting user through AJAX request)
-- Since AJAX could be performed by jquery. I didn't use axios. ( Why use redundant technology ?)
+- AJAX was performed by jquery instead of axios because jquery can also perform AJAX request. It would be redundant to used two seperate technology for same task.
 - I used bootstrap for styling.
 - I used pug as templating engine.
 - MongoDB as database
