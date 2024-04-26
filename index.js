@@ -9,6 +9,7 @@ const authRouter = require("./routes/auth");
 const bodyParser = require("body-parser");
 const dashboardRouter = require("./routes/dashboard");
 const guest = require("./middlewares/guest");
+const errorHandler = require("./middlewares/errorHandler");
 
 const app = express();
 app.set("view engine", "pug");
@@ -29,7 +30,10 @@ const urlencodedParser = bodyParser.urlencoded({ extended: true });
 app.use("/users", jsonParser, userRouter);
 app.use("/auth", urlencodedParser, authRouter);
 app.use("/dashboard", dashboardRouter);
-app.use("/", guest, (req, res) => res.render("index"));
+app.use("/", guest, (req, res) => {
+  res.render("index");
+});
+app.use(errorHandler);
 
 async function run() {
   // DB Connection
