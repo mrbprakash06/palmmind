@@ -7,6 +7,8 @@ html
             .col-6
                 if flash && flash.type === "error"
                     .alert.alert-danger(role='alert')= flash.message
+                if flash && flash.type === "info"
+                    .alert.alert-info(role='alert')= flash.message
                 h1 Welcome to Palmmind User CRUD
                 p Please login using your username and password
                 form.mb-4(method='post')
@@ -20,4 +22,5 @@ html
         .row.justify-content-md-center    
             .col-6
                 div 
-                    a(href='/auth/register') Don't have an account?
+                    a.me-4(href='/auth/register') Don't have an account?
+                    a(href='/auth/forgot-password') Forgot password?
