@@ -1,5 +1,5 @@
 # PALMMIND DEMO CRUD PROJECT - AS REQUESTED
-## Assumptions made during the developmen
+## Assumptions made during the development
 - I assumed that the software to be built should allow users to be registered, login and change password.
 - One of the users will be admin.
 - Admin will be able to manage registered users. Other normal user will be able to login and view their logged in page.
